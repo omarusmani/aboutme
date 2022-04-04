@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
+@import 'bourbon';
+body{
+    background-color: #f0f0f0;
+}
+.container{
+    display:grid;
+    height:80vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'title title title img'
+    'Par1 Par1 Par2 Par2'                     
+    'Par3 Par3 Par3 Par3';
+    gap:.2em;
+    align-items: stretch;
+    text-align: center;
+    opacity: 0.75;
+}
+.title{
+    background-color: rgb(107, 138, 163);
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    grid-area: title;
+    
+}
+img{
+    background-color: rgb(8, 27, 44);
+    border-radius: 5px;
+    padding: 5px;
+    align-self: center;
+    grid-area: img;
+    
+}
+.Par1{    
+    background-color: rgb(187, 194, 201);
+    font-size: 20px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    grid-area: Par1;
+    }
+.Par2{    
+    background-color: rgb(202, 214, 224);
+    font-size: 20px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    grid-area: Par2;
+    
+        }
+.Par3{    
+    background-color: rgb(216, 130, 130);
+    font-size: 20px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    grid-area: Par3;
+    }
+
+@media  (max-width: 600px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'title'
+        'img'
+        'Par1'
+        'Par2'                     
+        'Par3';
+
+        /* mobile layout */
+    }
+}
+    @media (min-width: 1000px){
+        .container{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            'title title title title title img'
+            'Par1 Par1 Par2 Par2 Par3 Par3'
+            ;
+    
+            /* desktop layout */
+        }
+
+} 
+/* add greater than 1300px for this one desktop */
