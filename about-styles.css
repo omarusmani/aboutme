@@ -12,7 +12,7 @@ body{
     'title title title img'
     'Par1 Par1 Par2 Par2'                     
     'Par3 Par3 Par3 Par3';
-    gap:.2em;
+    gap:.3em;
     align-items: stretch;
     text-align: center;
     opacity: 0.75;
